@@ -55,3 +55,6 @@ To add more jobs, modify the `jobs` array in the JavaScript section of the `inde
 
 &copy; 2025 Interactive Job Search Tool. All rights reserved.
 
+## Contributing
+
+Feel free to fork the project and submit pull requests with improvements or additional features.
