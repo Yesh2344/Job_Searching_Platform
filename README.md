@@ -35,3 +35,26 @@ The application comes pre-loaded with sample job listings across various industr
 - Project Management
 - Software Development Internship
 
+## Customization
+
+To add more jobs, modify the `jobs` array in the JavaScript section of the `index.html` file. Each job should include:
+- `title`
+- `company`
+- `location`
+- `type`
+- `description`
+
+## Future Improvements
+
+- Implement actual job application functionality
+- Add pagination for larger job lists
+- Enhance filtering options
+- Integrate with a backend job database
+
+## License
+
+&copy; 2025 Interactive Job Search Tool. All rights reserved.
+
+## Contributing
+
+Feel free to fork the project and submit pull requests with improvements or additional features.
