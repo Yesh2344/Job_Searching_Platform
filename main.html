@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Job Search Tool</title>
+  <style>
+    /* Basic Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background-color: #0073e6;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    /* Filters */
+    .search-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+    .search-filters input, .search-filters select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    /* Job Listing Cards */
+    .job-listing {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .job-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .job-card:hover {
+      transform: scale(1.02);
+    }
+    .job-title {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .job-company, .job-location, .job-type {
+      font-size: 0.95em;
+      color: #555;
+    }
+    .job-description {
+      margin-top: 10px;
+    }
+    /* Modal for Job Details */
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1000; 
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto; 
+      background-color: rgba(0,0,0,0.5);
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 4px;
+      position: relative;
+    }
+    .close {
+      color: #aaa;
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover, .close:focus {
+      color: black;
+    }
+    /* Footer */
+    footer {
+      background-color: #0073e6;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Interactive Job Search Tool</h1>
+    <p>Search and explore job opportunities tailored for you</p>
+  </header>
+
+  <div class="container">
+    <!-- Search Filters -->
+    <div class="search-filters">
+      <input type="text" id="searchInput" placeholder="Search job title...">
+      <select id="locationFilter">
+        <option value="">All Locations</option>
+        <option value="New York">New York</option>
+        <option value="San Francisco">San Francisco</option>
+        <option value="Remote">Remote</option>
+        <option value="Chicago">Chicago</option>
+      </select>
+      <select id="jobTypeFilter">
+        <option value="">All Job Types</option>
+        <option value="Full-time">Full-time</option>
+        <option value="Part-time">Part-time</option>
+        <option value="Contract">Contract</option>
+        <option value="Internship">Internship</option>
+      </select>
+    </div>
+
+    <!-- Job Listings -->
+    <div class="job-listing" id="jobListings"></div>
+  </div>
+
+  <!-- Modal for Job Details -->
+  <div id="jobModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2 id="modalJobTitle"></h2>
+      <p id="modalJobCompany"></p>
+      <p id="modalJobLocation"></p>
+      <p id="modalJobType"></p>
+      <p id="modalJobDescription"></p>
+      <button onclick="alert('Application process coming soon!')">Apply Now</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Interactive Job Search Tool. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Sample job data array
+    const jobs = [
+      {
+        title: "Software Engineer",
+        company: "Tech Innovators",
+        location: "San Francisco",
+        type: "Full-time",
+        description: "Develop cutting-edge software solutions using modern technologies."
+      },
+      {
+        title: "Frontend Developer",
+        company: "Creative Minds",
+        location: "New York",
+        type: "Full-time",
+        description: "Design and implement responsive user interfaces with a focus on UX."
+      },
+      {
+        title: "Data Analyst",
+        company: "Data Corp",
+        location: "Remote",
+        type: "Contract",
+        description: "Analyze large datasets to extract actionable insights for business strategy."
+      },
+      {
+        title: "Project Manager",
+        company: "Business Solutions",
+        location: "Chicago",
+        type: "Full-time",
+        description: "Manage projects from inception to completion ensuring timely delivery of solutions."
+      },
+      {
+        title: "Intern - Software Development",
+        company: "Startup Hub",
+        location: "Remote",
+        type: "Internship",
+        description: "Support development teams with coding, testing, and documentation."
+      }
+    ];
+
+    const jobListingsDiv = document.getElementById("jobListings");
+    const searchInput = document.getElementById("searchInput");
+    const locationFilter = document.getElementById("locationFilter");
+    const jobTypeFilter = document.getElementById("jobTypeFilter");
+    const jobModal = document.getElementById("jobModal");
+    const closeModal = document.getElementById("closeModal");
+
+    function renderJobs() {
+      jobListingsDiv.innerHTML = "";
+      const searchQuery = searchInput.value.toLowerCase();
+      const selectedLocation = locationFilter.value;
+      const selectedJobType = jobTypeFilter.value;
+
+      const filteredJobs = jobs.filter(job => {
+        const matchesTitle = job.title.toLowerCase().includes(searchQuery);
+        const matchesLocation = selectedLocation === "" || job.location === selectedLocation;
+        const matchesJobType = selectedJobType === "" || job.type === selectedJobType;
+        return matchesTitle && matchesLocation && matchesJobType;
+      });
+
+      if (filteredJobs.length === 0) {
+        jobListingsDiv.innerHTML = "<p>No jobs found. Please adjust your search criteria.</p>";
+        return;
+      }
+
+      filteredJobs.forEach(job => {
+        const jobCard = document.createElement("div");
+        jobCard.className = "job-card";
+        jobCard.innerHTML = `
+          <div class="job-title">${job.title}</div>
+          <div class="job-company">${job.company}</div>
+          <div class="job-location">Location: ${job.location}</div>
+          <div class="job-type">Type: ${job.type}</div>
+        `;
+        jobCard.addEventListener("click", () => openModal(job));
+        jobListingsDiv.appendChild(jobCard);
+      });
+    }
+
+    // Event listeners for filters
+    searchInput.addEventListener("input", renderJobs);
+    locationFilter.addEventListener("change", renderJobs);
+    jobTypeFilter.addEventListener("change", renderJobs);
+
+    // Modal functionality
+    function openModal(job) {
+      document.getElementById("modalJobTitle").textContent = job.title;
+      document.getElementById("modalJobCompany").textContent = "Company: " + job.company;
+      document.getElementById("modalJobLocation").textContent = "Location: " + job.location;
+      document.getElementById("modalJobType").textContent = "Type: " + job.type;
+      document.getElementById("modalJobDescription").textContent = job.description;
+      jobModal.style.display = "flex";
+    }
+
+    closeModal.addEventListener("click", () => {
+      jobModal.style.display = "none";
+    });
+
+    window.addEventListener("click", function(event) {
+      if (event.target === jobModal) {
+        jobModal.style.display = "none";
+      }
+    });
+
+    // Initial render
+    renderJobs();
+  </script>
+
+</body>
+</html>
