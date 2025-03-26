@@ -26,3 +26,12 @@ The Interactive Job Search Tool is a web-based application that allows users to 
 4. Click on a job card to view more details
 5. Click the close (×) button or outside the modal to return to the job list
 
+## Sample Jobs
+
+The application comes pre-loaded with sample job listings across various industries and locations, including:
+- Software Engineering
+- Frontend Development
+- Data Analysis
+- Project Management
+- Software Development Internship
+
