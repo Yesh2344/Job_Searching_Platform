@@ -18,3 +18,11 @@ The Interactive Job Search Tool is a web-based application that allows users to 
 - CSS3
 - Vanilla JavaScript
 
+## How to Use
+
+1. Open the `index.html` file in a web browser
+2. Use the search bar to find jobs by title
+3. Use location and job type dropdowns to refine your search
+4. Click on a job card to view more details
+5. Click the close (×) button or outside the modal to return to the job list
+
