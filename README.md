@@ -12,3 +12,9 @@ The Interactive Job Search Tool is a web-based application that allows users to 
 - **Responsive Design**: Works seamlessly across different device sizes
 - **Job Details Modal**: Click on a job to view comprehensive details
 
+## Technologies Used
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+
