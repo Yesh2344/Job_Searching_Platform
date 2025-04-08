@@ -58,3 +58,7 @@ To add more jobs, modify the `jobs` array in the JavaScript section of the `inde
 ## Contributing
 
 Feel free to fork the project and submit pull requests with improvements or additional features.
+
+## Contact
+
+Email:yeswanthsoma83@gmail.com
