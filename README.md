@@ -1,69 +1,69 @@
-# Interactive Job Search Tool
+<!-- PROJECT SHIELDS -->
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/version-1.0.0-4caf50.svg" alt="Version"></a>
+  <a href="#"><img src="https://img.shields.io/badge/status-BETA-orange.svg" alt="Status"></a>
+  <a href="#"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+  <a href="#"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
+</p>
 
-## Overview
+# 🚀 Interactive Job Search Tool
 
-The Interactive Job Search Tool is a web-based application that allows users to search and explore job opportunities with ease. The tool provides an intuitive interface for filtering and viewing job listings based on various criteria.
+> Find your next dream job—in a snap! 🔍💼
 
-## Features
+A sleek, web-based interface that empowers users to **discover**, **filter**, and **dive into** job listings with lightning-fast interactions.
 
-- **Dynamic Job Search**: Search jobs by title using real-time filtering
-- **Location Filtering**: Filter jobs by city or remote work options
-- **Job Type Selection**: Choose from full-time, part-time, contract, and internship positions
-- **Responsive Design**: Works seamlessly across different device sizes
-- **Job Details Modal**: Click on a job to view comprehensive details
+---
 
-## Technologies Used
+## 📋 Table of Contents
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
+1. [✨ Highlights](#✨-highlights)  
+2. [🛠️ Features](#🛠️-features)  
+3. [🎨 Tech Stack](#🎨-tech-stack)  
+4. [🚀 Quick Start](#🚀-quick-start)  
+5. [🔧 Customization](#🔧-customization)  
+6. [🌱 Roadmap](#🌱-roadmap)  
+7. [🤝 Contributing](#🤝-contributing)  
+8. [📄 License & Contact](#📄-license--contact)  
 
-## How to Use
+---
 
-1. Open the `index.html` file in a web browser
-2. Use the search bar to find jobs by title
-3. Use location and job type dropdowns to refine your search
-4. Click on a job card to view more details
-5. Click the close (×) button or outside the modal to return to the job list
+## ✨ Highlights
 
-## Sample Jobs
+> **Why you’ll love it:**  
+> - **Instant Search** – Real-time filtering as you type.  
+> - **Geo-aware** – Narrow down to your city or hunt for remote roles.  
+> - **Device-friendly** – Pixel-perfect on phones, tablets, and desktops.  
+> - **Zero Backend Needed** – Pure HTML/CSS/JS—just open & go!  
 
-The application comes pre-loaded with sample job listings across various industries and locations, including:
-- Software Engineering
-- Frontend Development
-- Data Analysis
-- Project Management
-- Software Development Internship
+<p align="center">
+  <img src="docs/demo.gif" alt="Demo" width="600">
+</p>
 
-## Customization
+---
 
-To add more jobs, modify the `jobs` array in the JavaScript section of the `index.html` file. Each job should include:
-- `title`
-- `company`
-- `location`
-- `type`
-- `description`
+## 🛠️ Features
 
-## Future Improvements
+| Category            | Functionality                                                                                   |
+|---------------------|-------------------------------------------------------------------------------------------------|
+| 🔍 **Dynamic Search**    | Instant filtering by job title, company, or keyword                                              |
+| 📍 **Location Filter**   | Choose from local cities or “Remote”                                                           |
+| ⏰ **Job Type**           | Full-Time · Part-Time · Contract · Internship                                                  |
+| 💬 **Details Modal**     | Click a job card for a rich, scrollable overlay with full description and “Apply” link         |
+| 📱 **Responsive UI**      | Mobile-first layout crafted with flexible grids & CSS variables                                 |
 
-- Implement actual job application functionality
-- Add pagination for larger job lists
-- Enhance filtering options
-- Integrate with a backend job database
+---
 
-## License
+## 🎨 Tech Stack
 
-&copy; 2025 Interactive Job Search Tool. All rights reserved.
+- **HTML5** & **CSS3** – Semantics + Custom Properties for theming  
+- **Vanilla JavaScript** – No frameworks, just fast, lean code  
+- **CSS Grid & Flexbox** – Modern, fluid layouts  
 
-## Contributing
+---
 
-Feel free to fork the project and submit pull requests with improvements or additional features.
+## 🚀 Quick Start
 
-## Contact
-
-Email:yeswanthsoma83@gmail.com
-
-## Copyrights
-
-@Yeswanth Soma
-All Copyrights Reserved
+1. **Clone the repo**  
+   ```bash
+   git clone https://github.com/your-username/interactive-job-search.git
+   cd interactive-job-search
