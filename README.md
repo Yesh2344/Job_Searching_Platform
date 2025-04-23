@@ -83,3 +83,19 @@ npx serve .
 - Toggle location & type filters ⚙️
 
 - Click a job card to explore details 📋
+
+
+🤝 Contributing
+Fork the repo
+
+Create a feature branch (git checkout -b feature/name)
+
+Commit your changes (git commit -m "feat: add amazing feature")
+
+Push to the branch (git push origin feature/name)
+
+Open a Pull Request
+
+Please follow the Contributor Code of Conduct.
+
+
