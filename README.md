@@ -67,3 +67,19 @@ A sleek, web-based interface that empowers users to **discover**, **filter**, an
    ```bash
    git clone https://github.com/your-username/interactive-job-search.git
    cd interactive-job-search
+2. **Open in browser**
+
+- Simply double-click index.html
+
+- Or serve with a quick HTTP server:
+
+```
+npx serve .
+```
+3. **Browse & Filter**
+
+- Type in the search bar 🔎
+
+- Toggle location & type filters ⚙️
+
+- Click a job card to explore details 📋
