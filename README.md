@@ -101,4 +101,4 @@ Please follow the Contributor Code of Conduct.
 
 ## Copyrights
 
-@Yeswanth Soma
+@Yeswanth Soma All Copyrights Reserved
