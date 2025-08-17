@@ -14,7 +14,7 @@ A sleek, web-based interface that empowers users to **discover**, **filter**, an
 
 ---
 
-## 📋 Table of Contents
+
 
 1. [✨ Highlights](#✨-highlights)  
 2. [🛠️ Features](#🛠️-features)  
