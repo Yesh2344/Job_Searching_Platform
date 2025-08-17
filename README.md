@@ -16,14 +16,7 @@ A sleek, web-based interface that empowers users to **discover**, **filter**, an
 
 ## 📋 Table of Contents
 
-1. [✨ Highlights](#✨-highlights)  
-2. [🛠️ Features](#🛠️-features)  
-3. [🎨 Tech Stack](#🎨-tech-stack)  
-4. [🚀 Quick Start](#🚀-quick-start)  
-5. [🔧 Customization](#🔧-customization)  
-6. [🌱 Roadmap](#🌱-roadmap)  
-7. [🤝 Contributing](#🤝-contributing)  
-8. [📄 License & Contact](#📄-license--contact)  
+
 
 ---
 
