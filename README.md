@@ -1,10 +1,4 @@
-<!-- PROJECT SHIELDS -->
-<p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/version-1.0.0-4caf50.svg" alt="Version"></a>
-  <a href="#"><img src="https://img.shields.io/badge/status-BETA-orange.svg" alt="Status"></a>
-  <a href="#"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
-  <a href="#"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
-</p>
+
 
 # 🚀 Interactive Job Search Tool
 
