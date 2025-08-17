@@ -6,7 +6,7 @@
   <a href="#"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
 </p>
 
-
+## Interactive Job Portal
 
 > Find your next dream job—in a snap! 🔍💼
 
