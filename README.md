@@ -8,6 +8,7 @@
 
 ## Interactive Job Portal
 
+> Find your next dream job—in a snap! 🔍💼
 
 A sleek, web-based interface that empowers users to **discover**, **filter**, and **dive into** job listings with lightning-fast interactions.
 
